@@ -90,6 +90,7 @@ export default function Charts(props) {
           Latest Reports
         </Button>
       } />
+
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
           <Widget title="Apex Line Chart" upperTitle noBodyPadding>

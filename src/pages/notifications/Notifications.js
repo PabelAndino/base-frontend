@@ -33,6 +33,8 @@ export default function NotificationsPage(props) {
   var [errorToastId, setErrorToastId] = useState(null);
 
   return (
+
+
     <>
       <PageTitle title="Notifications" />
       <Grid container spacing={4}>

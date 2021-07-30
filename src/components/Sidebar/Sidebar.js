@@ -9,7 +9,7 @@ import {
   QuestionAnswer as SupportIcon,
   LibraryBooks as LibraryIcon,
   HelpOutline as FAQIcon,
-  ArrowBack as ArrowBackIcon,
+  ArrowBack as ArrowBackIcon, AccountCircle,
 } from "@material-ui/icons";
 import { useTheme } from "@material-ui/styles";
 import { withRouter } from "react-router-dom";
@@ -56,7 +56,13 @@ const structure = [
     ],
   },
   { id: 5, type: "divider" },
-  { id: 6, type: "title", label: "HELP" },
+  {
+    id: 6,
+    label: "Company",
+    link: "/app/Company",
+    icon: <AccountCircle />,
+  }
+  /*{ id: 6, type: "title", label: "HELP" },
   { id: 7, label: "Library", link: "https://flatlogic.com/templates", icon: <LibraryIcon /> },
   { id: 8, label: "Support", link: "https://flatlogic.com/forum", icon: <SupportIcon /> },
   { id: 9, label: "FAQ", link: "https://flatlogic.com/forum", icon: <FAQIcon /> },
@@ -79,7 +85,7 @@ const structure = [
     label: "Background",
     link: "",
     icon: <Dot size="small" color="secondary" />,
-  },
+  },*/
 ];
 
 function Sidebar({ location }) {
