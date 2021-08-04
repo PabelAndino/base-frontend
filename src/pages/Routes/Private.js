@@ -2,9 +2,13 @@ import React from "react";
 import { Redirect, Route } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { login } from "../../actions/auth";
 
-const Private = ({ component, isAuthenticated,...rest }) => {
+
+const Private = ({ component, isAuthenticated,token ,...rest }) => {
+
+console.log(token,'THE FUCK TOKEn')
+
+
   return (
     <Route
       {...rest}
@@ -27,12 +31,16 @@ const Private = ({ component, isAuthenticated,...rest }) => {
 };
 
 
+
+
 Private.propTypes = {
-  isAuthenticated: PropTypes.bool
+  isAuthenticated: PropTypes.bool,
+  token: PropTypes.bool
 }
 
 const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
+  isAuthenticated: state.auth.isAuthenticated,
+  token: state.auth.token
 })
 
 export default connect(mapStateToProps,)(Private);

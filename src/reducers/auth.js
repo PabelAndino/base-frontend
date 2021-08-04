@@ -1,7 +1,15 @@
 import {LOGIN_SUCCESS,LOGOUT} from "../actions/types";
 
+
+const isAuthenticated = '';
+const authState = ()=>{
+    const credential = localStorage.getItem("token");
+
+    return false;
+}
+
 const initialState ={
-    token:localStorage.getItem('token'),
+    token:authState,
     isAuthenticated:false,
     loading:false
 }
@@ -13,9 +21,9 @@ export default function (state=initialState,action){
         case LOGIN_SUCCESS:
             localStorage.setItem('token',payload.access);
             return {
-                ...state,
+                loading:false,
                 isAuthenticated: true,
-                token:payload.access
+                token:true
             }
         case LOGOUT:
             localStorage.removeItem('token');
