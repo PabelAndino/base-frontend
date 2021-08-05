@@ -35,6 +35,7 @@ import {
   toggleSidebar,
 } from "../../context/LayoutContext";
 import { useUserDispatch, signOut } from "../../context/UserContext";
+import  Logout  from "../../pages/login/Logout";
 
 const messages = [
   {
@@ -104,6 +105,13 @@ export default function Header(props) {
   var [isNotificationsUnread, setIsNotificationsUnread] = useState(true);
   var [profileMenu, setProfileMenu] = useState(null);
   var [isSearchOpen, setSearchOpen] = useState(false);
+
+
+  const handleLogout = () =>{
+    console.log('logout')
+    return(<Logout/>)
+
+  }
 
   return (
     <AppBar position="fixed" className={classes.appBar}>
@@ -324,15 +332,16 @@ export default function Header(props) {
           >
             <AccountIcon className={classes.profileMenuIcon} /> Messages
           </MenuItem>
-          <div className={classes.profileMenuUser}>
+          {/*<div className={classes.profileMenuUser}>
             <Typography
               className={classes.profileMenuLink}
               color="primary"
-              onClick={() => signOut(userDispatch, props.history)}
+              onClick={()=>Logout}
             >
-              Sign Out
+              Salir
             </Typography>
-          </div>
+          </div>*/}
+          <Logout/>
         </Menu>
       </Toolbar>
     </AppBar>

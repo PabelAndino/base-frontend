@@ -11,11 +11,8 @@ import {
 } from "@material-ui/core";
 import { Redirect } from "react-router-dom";
 
-
 // styles
 import useStyles from "./styles";
-
-
 
 // context
 
@@ -26,17 +23,6 @@ import Alert from "../Alerts/Alert";
 
 function Login({login,isLoading, isAuthenticated}) {
   var classes = useStyles();
-
- /* // global
-  var userDispatch = useUserDispatch();
-
-  // local
-  var [isLoading, setIsLoading] = useState(false);
-  var [error, setError] = useState(null);
-  var [activeTabId, setActiveTabId] = useState(0);
-  var [nameValue, setNameValue] = useState("");
-  var [loginValue, setLoginValue] = useState("");
-  var [passwordValue, setPasswordValue] = useState("");*/
 
 
   const [formData, setFormData] = useState({
@@ -65,11 +51,10 @@ function Login({login,isLoading, isAuthenticated}) {
   }
 
 
-
   const handleLogin = (e) =>{
     e.preventDefault();
     login(username,password);
-    console.log(username,password);
+
   }
 
   if(isAuthenticated){

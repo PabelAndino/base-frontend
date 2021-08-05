@@ -9,7 +9,7 @@ import Error from "../pages/error";
 import Login from "../pages/login";
 
 // context
-import { useUserState } from "../context/UserContext";
+//import { useUserState } from "../context/UserContext";
 //import Alert from "../pages/Alerts/Alert";
 import {Provider} from "react-redux";
 import store from '../Store';
@@ -17,9 +17,8 @@ import Private   from "../pages/Routes/Private";
 import Public  from "../pages/Routes/Public";
 
 export default function App() {
-  // global
- // var { isAuthenticated } = useUserState();
-  //const isAuthenticated = true;
+
+
   return (
         <Provider store={store}>
             <HashRouter>

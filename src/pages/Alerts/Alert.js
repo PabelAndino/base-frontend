@@ -37,7 +37,7 @@ const Alert = ({alerts}) => {
 
             {
 
-                msg ? <NotificationsPage msgType={messageData}/> : console.log('nothing')
+                msg ? <NotificationsPage msgType={messageData}/> : console.log('')
             }
 
 
